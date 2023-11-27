@@ -25,7 +25,7 @@ import {Link} from 'react-router-dom';
         </CardHeader>
         <CardBody>
           <Typography variant="h6" color="gray" className="mb-4 uppercase">
-            Aubout Us
+            About Us
           </Typography>
           <Typography variant="h4" color="blue-gray" className="mb-2">
           Find What's Lost, Reclaim What's Found: Connecting Lost Treasures to Their Rightful Owners
