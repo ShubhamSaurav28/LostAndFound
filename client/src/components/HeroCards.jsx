@@ -24,7 +24,7 @@ export default function HeroCards() {
           Shubham Saurav
         </Typography>
         <Typography color="blue-gray" className="font-medium" textGradient>
-          Frontend/Backend Developer
+          Backend Developer
         </Typography>
       </CardBody>
       <CardFooter className="flex justify-center gap-7 pt-2">
@@ -170,7 +170,7 @@ export default function HeroCards() {
           Aryan Dahiya
         </Typography>
         <Typography color="blue-gray" className="font-medium" textGradient>
-          Presentation/Report Maker
+          Frontend Developer
         </Typography>
       </CardBody>
       <CardFooter className="flex justify-center gap-7 pt-2">
