@@ -8,6 +8,10 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function ItemsPage() {
   const [Items,setItems] = useState([]);
+  const [catagory,setcatagory] = useState('');
+    const handleChangecata = (event) => {
+        setcatagory(event.target.value)
+      }
   React.useEffect(() => {
     fetch('http://localhost:4000/client/post')
       .then(response => {
@@ -39,7 +43,7 @@ export default function ItemsPage() {
     try {
         const response = await fetch(`http://localhost:4000/client/search`,{
           method:'POST',
-          body: JSON.stringify({search}),
+          body: JSON.stringify({search,catagory}),
           headers: {'Content-Type':'application/json'},
         });
         if (response.ok) {
@@ -68,6 +72,16 @@ export default function ItemsPage() {
         <input onKeyDown={handleKeyDown} onChange={event =>setsearch(event.target.value)} className="placeholder:italic placeholder:text-slate-400 block bg-white w-[30rem] border-2 border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for anything..." type="text" name="search"/>
         </label>
         </span>
+        <div className='mx-3'>
+    <select name="catagory" value={catagory} onChange={handleChangecata} onClick={searched}
+                 className="peer h-full w-full rounded-[9px] border border-blue-gray-200 shadow bg-black px-3 py-2.5 font-sans text-sm font-normal text-white outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 empty:!bg-red-500 focus:border-2 focus:border-gray-500 focus:border-t-transparent focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50">
+                    <option value="">Filter</option>
+                    <option value="elctronic">Electronic</option>
+                    <option value="notebook">Notebook</option>
+                    <option value="bottle">Bottle</option>
+                    <option value="document">Document</option>
+                </select>
+    </div>
         </div>
     <div className='container justify-center px-auto flex flex-wrap gap-6 mx-auto my-4'>
     {Items.length > 0 && Items.map(item => (

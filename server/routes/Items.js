@@ -106,21 +106,28 @@ router.post('/client/post', uploadMiddleware.single('file'), async (req,res) => 
     res.json("id deleted");
   });
 
-  router.post('/client/search', async (req,res)=>{
-    const {search} = req.body;
-    console.log(search);
-    try{
-      const items = await Item.find({ itemname: { $regex: new RegExp(search, 'i') } });
-      if (items.length === 0) {
-        return res.status(404).json({ message: 'No items found for the given search term.' });
+    router.post('/client/search', async (req,res)=>{
+      const {search,catagory} = req.body;
+      console.log(search);
+      try{
+        let query = {};
+        if (search) {
+          query.itemname = { $regex: new RegExp(search, 'i') };
+        }
+        if (catagory) {
+          query.catagory = catagory;
+        }
+        const items = await Item.find(query);
+        if (items.length === 0) {
+          return res.status(404).json({ message: 'No items found for the given search term.' });
+        }
+        res.status(200).json( items ); 
       }
-      res.status(200).json( items ); 
-    }
-    catch(error){
-      console.error(error);
-      res.status(500).json({ error: 'Internal Server Error' });
-    }
-  })
+      catch(error){
+        console.error(error);
+        res.status(500).json({ error: 'Internal Server Error' });
+      }
+    })
 
 
 
