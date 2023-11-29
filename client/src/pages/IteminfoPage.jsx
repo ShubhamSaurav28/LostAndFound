@@ -14,7 +14,7 @@ export default function IteminfoPage() {
   const {id} = useParams();
   console.log('ID:', id);
   React.useEffect(() => {
-    fetch(`http://localhost:4000/client/post/${id}`)
+    fetch(`http://localhost:4001/client/post/${id}`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);

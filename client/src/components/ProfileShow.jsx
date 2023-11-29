@@ -16,7 +16,7 @@ export default function ProfileShow() {
 
     
     React.useEffect(() => {
-        fetch('http://localhost:4000/api/profile', {
+        fetch('http://localhost:4001/api/profile', {
           credentials: 'include',
         }).then(response => {
           response.json().then(userInfo => {

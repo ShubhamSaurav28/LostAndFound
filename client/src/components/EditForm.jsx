@@ -40,7 +40,7 @@ export default function EditForm() {
       }
 
       useEffect(() => {
-        fetch('http://localhost:4000/client/post/'+id)
+        fetch('http://localhost:4001/client/post/'+id)
           .then(response => {
             response.json().then(postInfo => {
               setdescription(postInfo.description);
@@ -65,7 +65,7 @@ export default function EditForm() {
         if (files?.[0]) {
           data.set('file', files?.[0]);
         }
-        const response = await fetch('http://localhost:4000/client/post', {
+        const response = await fetch('http://localhost:4001/client/post', {
           method: 'PUT',
           body: data,
           credentials: 'include',

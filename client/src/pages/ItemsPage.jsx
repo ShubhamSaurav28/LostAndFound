@@ -13,7 +13,7 @@ export default function ItemsPage() {
         setcatagory(event.target.value)
       }
   React.useEffect(() => {
-    fetch('http://localhost:4000/client/post')
+    fetch('http://localhost:4001/client/post')
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -41,7 +41,7 @@ export default function ItemsPage() {
   async function searched() {
     console.log("started");
     try {
-        const response = await fetch(`http://localhost:4000/client/search`,{
+        const response = await fetch(`http://localhost:4001/client/search`,{
           method:'POST',
           body: JSON.stringify({search,catagory}),
           headers: {'Content-Type':'application/json'},

@@ -48,7 +48,7 @@ export default function ItemInfo({
   async function deleted(){
     const data = new FormData();
     data.set('id', id);
-    const response = await fetch(`http://localhost:4000/client/delete/${id}`, {
+    const response = await fetch(`http://localhost:4001/client/delete/${id}`, {
           method: 'DELETE',
           body: data,
           credentials: 'include',
@@ -79,7 +79,7 @@ export default function ItemInfo({
         className="m-0 rounded-none"
       >
         <img
-          src={'http://localhost:4000/'+cover}
+          src={'http://localhost:4001/'+cover}
           alt="ui/ux review check"
         />
       </CardHeader>

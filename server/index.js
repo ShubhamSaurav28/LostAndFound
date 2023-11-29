@@ -10,7 +10,7 @@ app.use(cookieParser());
 
 
 
-app.use(cors({ credentials: true, origin: 'http://localhost:5173' }));
+app.use(cors({ credentials: true, origin: 'http://localhost:5174' }));
 app.use(express.json());
 
 app.use(userRoutes);
@@ -24,6 +24,6 @@ app.get('/',(req,res)=>{
 
 connectDB();
 
-app.listen(4000,()=>{
-    console.log("server",4000);
+app.listen(4001,()=>{
+    console.log("server",4001);
 })

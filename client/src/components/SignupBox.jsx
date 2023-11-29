@@ -29,7 +29,7 @@ export default function SignUpPage() {
   
   async function register(ev) {
     ev.preventDefault();
-    const response = await fetch('http://localhost:4000/api/register', {
+    const response = await fetch('http://localhost:4001/api/register', {
       method: 'POST',
       body: JSON.stringify({username,useremail,phoneno,password,confirmpassword}),
       headers: {'Content-Type':'application/json'},
@@ -48,7 +48,7 @@ export default function SignUpPage() {
 
   // async function register(event){
   //   event.preventDefault();
-  //   await fetch('localhost:4000/register',{
+  //   await fetch('localhost:4001/register',{
   //     method:'POST',
   //     body: JSON.stringify({username,useremail, password}),
   //     headers: {'Content-Type':'application/json'},
@@ -58,7 +58,7 @@ export default function SignUpPage() {
   // const submitData = async (event) => {
   //   event.preventDefault();
   //   try {
-  //     const response = await axios.post('http://localhost:4000/register', {
+  //     const response = await axios.post('http://localhost:4001/register', {
   //       username,
   //       useremail,
   //       password,
