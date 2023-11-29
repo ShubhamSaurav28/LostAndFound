@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const connectDB = ()=>{ mongoose.connect('mongodb://127.0.0.1:27017/lostfound')
+const connectDB = ()=>{ mongoose.connect('mongodb+srv://ShubhamSaurav:testing1234@cluster0.sajvfjq.mongodb.net/?retryWrites=true&w=majority')
 .then(()=>{
     console.log("DB Connected");
 })

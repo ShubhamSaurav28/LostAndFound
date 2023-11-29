@@ -21,10 +21,6 @@ app.get('/',(req,res)=>{
     res.send("working")
 })
 
-// app.post('/register',(req,res)=>{
-//     const {username,useremail,password} =req.body;
-//     res.json({requestData:{username,useremail,password}});
-// });
 
 connectDB();
 

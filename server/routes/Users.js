@@ -17,6 +17,9 @@ router.post('/api/register', async (req,res) => {
     if (!(username && useremail && phoneno && password && confirmpassword)) {
       return res.status(400).json({ error: 'All fields are necessary.' });
     }
+    if(phoneno.length!=10){
+      return res.status(400).json("phone no. should be of 10 numbers")
+    }
     const existingUser=await User.findOne({useremail});
     if(existingUser)
     {
