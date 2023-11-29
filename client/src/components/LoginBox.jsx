@@ -70,9 +70,6 @@ import 'react-toastify/dist/ReactToastify.css';
         <CardBody className="flex flex-col gap-4">
           <Input type="email" label="Email" size="lg" value={useremail} onChange={event =>setuseremail(event.target.value)} />
           <Input type="password" label="Password" size="lg" value={password} onChange={event =>setpassword(event.target.value)} />
-          <div className="-ml-2.5">
-            <Checkbox label="Remember Me" />
-          </div>
         </CardBody>
         <CardFooter className="pt-0">
           <Button variant="gradient" fullWidth type="submit" onClick={login}>

@@ -22,18 +22,7 @@ const userSchema = new mongoose.Schema({
         required : true,
         trim : true,
     },
-    // lostItems : [
-    //     {
-    //         type : mongoose.Schema.Types.ObjectId,
-    //         ref : 'LostItem'
-    //     }
-    // ],
-    // foundItems : [
-    //     {
-    //         type : mongoose.Schema.Types.ObjectId,
-    //         ref : 'FoundItem'
-    //     }
-    // ]
+
 
 })
 

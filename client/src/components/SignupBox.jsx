@@ -46,32 +46,6 @@ export default function SignUpPage() {
     return <Navigate to={'/login'} />
   }
 
-  // async function register(event){
-  //   event.preventDefault();
-  //   await fetch('localhost:4001/register',{
-  //     method:'POST',
-  //     body: JSON.stringify({username,useremail, password}),
-  //     headers: {'Content-Type':'application/json'},
-  //   })
-  // }
-
-  // const submitData = async (event) => {
-  //   event.preventDefault();
-  //   try {
-  //     const response = await axios.post('http://localhost:4001/register', {
-  //       username,
-  //       useremail,
-  //       password,
-  //     });
-  //     if (response && response.data && response.data.useremail) {
-  //       console.log("Hello", response);
-  //       navigate('/login');
-  //     }
-  //   } catch (error) {
-  //     // toast.error('User Already Exists');
-  //     console.error('Error during signup:', error);
-  //   }
-  // };
 
   return (
     <>
@@ -172,25 +146,6 @@ export default function SignUpPage() {
             }}
           />
         </div>
-        <Checkbox
-          label={
-            <Typography
-              variant="small"
-              color="gray"
-              className="flex items-center font-normal"
-            >
-              I agree the
-              <a
-                href="#"
-                className="font-medium transition-colors hover:text-gray-900"
-              >
-                &nbsp;Terms and Conditions
-              </a>
-            </Typography>
-          }
-          containerProps={{ className: "-ml-2.5" }}
-        />
-        
         <Button className="mt-3" fullWidth type="submit" onClick={register}>
           sign up
         </Button>
