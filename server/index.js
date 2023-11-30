@@ -21,6 +21,10 @@ app.get('/',(req,res)=>{
     res.send("working")
 })
 
+app.get('*', (req, res) => {
+    res.send("hi");
+    // res.sendFile(path.resolve(__dirname, 'index.html'));
+  });
 
 connectDB();
 
