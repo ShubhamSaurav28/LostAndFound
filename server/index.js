@@ -10,7 +10,7 @@ app.use(cookieParser());
 
 
 
-app.use(cors({ credentials: true, origin: 'http://localhost:5174' }));
+app.use(cors({ credentials: true, origin: ['http://localhost:5174','https://lostandfound-dc4u.onrender.com']}));
 app.use(express.json());
 
 app.use(userRoutes);
