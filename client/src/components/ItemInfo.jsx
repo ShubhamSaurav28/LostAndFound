@@ -137,7 +137,7 @@ export default function ItemInfo({
                   </div>
                 </div>
                   <Link to={'/'} className="text-initial font-medium text-blue-gray-500">
-                      <Button>Delete</Button>
+                      <Button onClick={deleted}>Delete</Button>
                   </Link>
               </PopoverContent>
               </div>
