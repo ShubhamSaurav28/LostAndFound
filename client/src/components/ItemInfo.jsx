@@ -24,6 +24,7 @@ import { Link } from 'react-router-dom';
 import { UserContext } from '../../UserContext';
 import { useContext } from 'react';
 import { useParams } from 'react-router-dom';
+import fetching from '../../fetchURL';
 
 export default function ItemInfo({
   useremail,
@@ -48,7 +49,7 @@ export default function ItemInfo({
   async function deleted(){
     const data = new FormData();
     data.set('id', id);
-    const response = await fetch(`http://localhost:4001/client/delete/${id}`, {
+    const response = await fetch(`${fetching}/client/delete/${id}`, {
           method: 'DELETE',
           body: data,
           credentials: 'include',
@@ -79,7 +80,7 @@ export default function ItemInfo({
         className="m-0 rounded-none"
       >
         <img
-          src={'http://localhost:4001/'+cover}
+          src={`${fetching}/`+cover}
           alt="ui/ux review check"
         />
       </CardHeader>

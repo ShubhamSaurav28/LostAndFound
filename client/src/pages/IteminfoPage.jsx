@@ -7,6 +7,7 @@ import {formatISO9075} from "date-fns";
 import {Link} from 'react-router-dom';
 import { UserContext } from '../../UserContext';
 import { toast } from 'react-toastify';
+import fetching from '../../fetchURL';
 
 export default function IteminfoPage() {
   const [itemInfo,setitemInfo] = useState(null);
@@ -14,7 +15,7 @@ export default function IteminfoPage() {
   const {id} = useParams();
   console.log('ID:', id);
   React.useEffect(() => {
-    fetch(`http://localhost:4001/client/post/${id}`)
+    fetch(`${fetching}/client/post/${id}`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);

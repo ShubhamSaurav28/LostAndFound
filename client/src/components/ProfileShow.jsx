@@ -10,13 +10,14 @@ import {
   import { UserContext } from '../../UserContext';
   import { useContext } from 'react';
   import useravatar from '../assets/useravatar.png';
+import fetching from '../../fetchURL';
   
 export default function ProfileShow() {
     const {userInfo,setUserInfo} = useContext(UserContext);
 
     
     React.useEffect(() => {
-        fetch('http://localhost:4001/api/profile', {
+        fetch(`${fetching}/api/profile`, {
           credentials: 'include',
         }).then(response => {
           response.json().then(userInfo => {

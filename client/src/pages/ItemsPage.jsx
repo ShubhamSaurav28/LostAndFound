@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Button } from '@material-tailwind/react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import fetching from '../../fetchURL';
 
 export default function ItemsPage() {
   const [Items,setItems] = useState([]);
@@ -13,7 +14,7 @@ export default function ItemsPage() {
         setcatagory(event.target.value)
       }
   React.useEffect(() => {
-    fetch('http://localhost:4001/client/post')
+    fetch(`${fetching}/client/post`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
@@ -41,7 +42,7 @@ export default function ItemsPage() {
   async function searched() {
     console.log("started");
     try {
-        const response = await fetch(`http://localhost:4001/client/search`,{
+        const response = await fetch(`${fetching}/client/search`,{
           method:'POST',
           body: JSON.stringify({search,catagory}),
           headers: {'Content-Type':'application/json'},

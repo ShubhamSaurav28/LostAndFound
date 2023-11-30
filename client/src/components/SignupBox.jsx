@@ -14,6 +14,7 @@ import { useNavigate } from 'react-router-dom';
 import {Navigate} from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import fetching from "../../fetchURL";
 
 
  
@@ -29,7 +30,7 @@ export default function SignUpPage() {
   
   async function register(ev) {
     ev.preventDefault();
-    const response = await fetch('http://localhost:4001/api/register', {
+    const response = await fetch(`${fetching}/api/register`, {
       method: 'POST',
       body: JSON.stringify({username,useremail,phoneno,password,confirmpassword}),
       headers: {'Content-Type':'application/json'},
@@ -45,6 +46,7 @@ export default function SignUpPage() {
   if (redirect) {
     return <Navigate to={'/login'} />
   }
+
 
 
   return (
@@ -145,8 +147,8 @@ export default function SignUpPage() {
               className: "before:content-none after:content-none",
             }}
           />
-        </div>
-        <Button className="mt-3" fullWidth type="submit" onClick={register}>
+        </div>        
+        <Button className="mt-5" fullWidth type="submit" onClick={register}>
           sign up
         </Button>
         <Typography color="gray" className="mt-2 text-center font-normal">

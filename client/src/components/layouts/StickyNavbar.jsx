@@ -24,6 +24,7 @@ import { useContext,useState } from "react";
 import { UserContext } from "../../../UserContext";
 // import { Outlet, Link, useLoaderData,} from "react-router-dom";
 import { useEffect } from "react";
+import fetching from "../../../fetchURL";
 
 
 
@@ -40,7 +41,7 @@ export default function StickyNavbar() {
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false),
     );
-    fetch('http://localhost:4000/api/profile', {
+    fetch(`${fetching}/api/profile`, {
       credentials: 'include',
     }).then(response => {
       response.json().then(userInfo => {

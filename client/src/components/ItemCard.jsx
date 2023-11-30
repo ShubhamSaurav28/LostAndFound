@@ -3,6 +3,7 @@ import { format } from 'date-fns/esm'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import ReactTimeAgo from 'react-time-ago'
+import fetching from '../../fetchURL';
 
 export default function ItemCard({useremail,
   itemname,
@@ -29,7 +30,7 @@ export default function ItemCard({useremail,
         <div className="relative mx-4 -mt-6 overflow-hidden text-white  rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
           <img
           className='object-cover object-center'
-            src={'http://localhost:4001/'+cover}
+            src={`${fetching}/`+cover}
             alt="img-blur-shadow"
             layout="fill"
           />

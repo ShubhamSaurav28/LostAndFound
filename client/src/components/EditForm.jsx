@@ -15,6 +15,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import fetching from '../../fetchURL';
 
 
 export default function EditForm() {
@@ -40,7 +41,7 @@ export default function EditForm() {
       }
 
       useEffect(() => {
-        fetch('http://localhost:4001/client/post/'+id)
+        fetch(`${fetching}/client/post/`+id)
           .then(response => {
             response.json().then(postInfo => {
               setdescription(postInfo.description);
@@ -65,7 +66,7 @@ export default function EditForm() {
         if (files?.[0]) {
           data.set('file', files?.[0]);
         }
-        const response = await fetch('http://localhost:4001/client/post', {
+        const response = await fetch(`${fetching}/client/post`, {
           method: 'PUT',
           body: data,
           credentials: 'include',
