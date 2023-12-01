@@ -17,7 +17,7 @@ export default function HeroCards() {
 
     <Card className="min-w-80 w-[18rem] h-[25rem] m-4">
       <CardHeader floated={false} className="h-50">
-        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29ufGVufDB8fDB8fHww" alt="profile-picture" />
+        <img src="https://images.unsplash.com/photo-1521803751845-f36d43bb1f76?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9zdCUyMGFuZCUyMGZvdW5kfGVufDB8fDB8fHww" alt="profile-picture" />
       </CardHeader>
       <CardBody className="text-center">
         <Typography variant="h4" color="blue-gray" className="mb-2">
@@ -66,7 +66,7 @@ export default function HeroCards() {
 
     <Card className="min-w-80 w-[18rem] h-[25rem] m-4">
       <CardHeader floated={false} className="h-50">
-        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29ufGVufDB8fDB8fHww" alt="profile-picture" />
+        <img src="https://images.unsplash.com/photo-1521803751845-f36d43bb1f76?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9zdCUyMGFuZCUyMGZvdW5kfGVufDB8fDB8fHww" alt="profile-picture" />
       </CardHeader>
       <CardBody className="text-center">
         <Typography variant="h4" color="blue-gray" className="mb-2">
@@ -114,7 +114,7 @@ export default function HeroCards() {
     </Card>
     <Card className="min-w-80 w-[18rem] h-[25rem] m-4">
       <CardHeader floated={false} className="h-50">
-        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29ufGVufDB8fDB8fHww" alt="profile-picture" />
+        <img src="https://images.unsplash.com/photo-1521803751845-f36d43bb1f76?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9zdCUyMGFuZCUyMGZvdW5kfGVufDB8fDB8fHww" alt="profile-picture" />
       </CardHeader>
       <CardBody className="text-center">
         <Typography variant="h4" color="blue-gray" className="mb-2">
@@ -163,7 +163,7 @@ export default function HeroCards() {
 
     <Card className="min-w-80 w-[18rem] h-[25rem] m-4">
       <CardHeader floated={false} className="h-50">
-        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29ufGVufDB8fDB8fHww" alt="profile-picture" />
+        <img src="https://images.unsplash.com/photo-1521803751845-f36d43bb1f76?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9zdCUyMGFuZCUyMGZvdW5kfGVufDB8fDB8fHww" alt="profile-picture" />
       </CardHeader>
       <CardBody className="text-center">
         <Typography variant="h4" color="blue-gray" className="mb-2">
@@ -209,14 +209,6 @@ export default function HeroCards() {
         </Tooltip>
       </CardFooter>
     </Card>
-    
-    
-
-    
-
-    
-
- 
 </div>
 </>
   )
